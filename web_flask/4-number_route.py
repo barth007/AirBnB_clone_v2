@@ -47,8 +47,8 @@ def python_replace(text="is cool"):
 @app.route('/number/<int:n>', strict_slashes=False)
 def number_url(n):
     result = escape(n)
-    return result
+    return f"{result} is a number"
 
 
 if __name__ == "__main__":
-    app.run("0i.0.0.0", port=5000, debug=True)
+    app.run("0.0.0.0", port=5000, debug=True)
